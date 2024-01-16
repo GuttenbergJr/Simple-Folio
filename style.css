@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+body {
+    background-color: #E5E5E5;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    min-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Navbar  */
+
+@media(max-width: 768px) {
+
+    .screen1_menu_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    #hero {
+        font-size: 0.9rem;
+    }
+
+    .screen1_menu_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+    }
+
+    .screen1_menu_hamburger {
+        width: 20px;
+        height: 2px;
+        background-color: black;
+        border-radius: 5px;
+        z-index: 10;
+        transition: all .5s ease;
+    }
+
+    .screen1_menu_hamburger::before,
+    .screen1_menu_hamburger::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: black;
+        border-radius: 5px;
+        transition: all .5s ease;
+    }
+
+    .screen1_menu_hamburger::before {
+        transform: translateY(-6px);
+    }
+
+    .screen1_menu_hamburger::after {
+        transform: translateY(6px);
+    }
+
+    .screen1_menu_items {
+        background: #295DE2;
+        color: #533557;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 100%;
+        height: 100%;
+        width: 70%;
+        padding-top: 70px;
+        top: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    .screen1_menu_items li {
+        padding: 10px 0;
+        text-align: center;
+        list-style-type: none;
+        transition: all .2s ease;
+        font-family: 'Titillium Web';
+        font-weight: 600;
+        display: inline-block;
+        list-style: outside none none;
+        margin: .5em 1em;
+        padding: 0;
+    }
+
+    .screen1_menu_items * {
+        box-sizing: border-box;
+        transition: all .35s ease;
+    }
+
+    .screen1_menu_items a {
+        padding: .5em .8em;
+        color: #1B1193;
+        position: relative;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+
+    .screen1_menu_items a::before,
+    .screen1_menu_items a::after {
+        content: '';
+        height: 14px;
+        width: 14px;
+        position: absolute;
+        transition: all .35s ease;
+        opacity: 0;
+    }
+
+    .screen1_menu_items a::before {
+        content: '';
+        right: 0;
+        top: 0;
+        border-top: 3px solid #ffffff;
+        border-right: 3px solid #ffffff;
+        transform: translate(-100%, 50%);
+    }
+
+    .screen1_menu_items a:after {
+        content: '';
+        left: 0;
+        bottom: 0;
+        border-bottom: 3px solid #ffffff;
+        border-left: 3px solid #ffffff;
+        transform: translate(100%, -50%)
+    }
+
+    .screen1_menu_items a:hover:before,
+    .screen1_menu_items a:hover:after {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    .screen1_menu_items a:hover {
+        color: #ffffff;
+    }
+
+
+
+
+
+
+
+
+    .screen1_menu_btn input:checked~.screen1_menu_hamburger {
+        transform: translateX(-50px);
+        background: transparent;
+    }
+
+    .screen1_menu_btn input:checked~.screen1_menu_hamburger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    .screen1_menu_btn input:checked~.screen1_menu_hamburger::after {
+        transform: rotate(-45deg) translate(35px);
+    }
+
+    .screen1_menu_btn input:checked~.screen1_menu_items {
+        left: 40%;
+    }
+
+    .screen1_menu_btn input {
+        display: none;
+    }
+
+    .page_content {
+        text-align: center;
+        margin-top: 3em;
+    }
+
+    .page_content h3 {
+        padding-bottom: 10px;
+    }
+
+    #hero {
+        color: #1B1193;
+    }
+}
+
+/* End of Navbar */
+
+/* Hero Section */
+
+
+
+/* End of Hero section */
