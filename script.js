@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const mobileMenuButton = document.getElementById('mobile-menu');
-    const navList = document.querySelector('.nav-list');
+let burger = document.getElementById('burger'),
+	 nav    = document.getElementById('main-nav');
 
-    mobileMenuButton.addEventListener('click', function () {
-        navList.classList.toggle('show');
-    });
+burger.addEventListener('click', function(e){
+	this.classList.toggle('is-open');
+	nav.classList.toggle('is-open');
 });
+

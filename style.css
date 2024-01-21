@@ -16,98 +16,190 @@ body {
 
 /* Navbar  */
 
-.navbar {
-    padding: 15px 0;
-    width: 100%;
+/* Main menu positionning */
+.main-nav {
+    position: absolute;
     top: 0;
-    z-index: 1000;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: #FFF;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .375s;
 }
 
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+.main-nav.is-open {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
 }
 
-.logo {
-    color: #000000;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
+/* Yellow band effect */
+.main-nav::before {
+	 content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px;
+    background: #41DEC2;
+    transform-origin: 0 0;
+    transform: skew(-14deg) translateX(-120%);
+    transition: all .275s .1s;
 }
 
-.nav-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.main-nav.is-open::before {
+    transform: skew(-14deg) translateX(0);
 }
 
-.nav-list li {
-    margin: 0 15px;
-}
-
-.nav-list a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-list a:hover {
-    color: #41DEC2;
-}
-
-.menu-toggle {
-    cursor: pointer;
-    display: none;
+/* Skewing effect on menu links */
+.main-nav ul {
+    display: inline-flex;
     flex-direction: column;
+    height: 93%; /* Should be 100%, but we have a notice message :D */
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
 }
 
-.bar {
-    background-color: #000000;
-    height: 3px;
-    width: 25px;
-    margin: 5px ;
+.main-nav li {
+    display: block;
+    margin: .5rem 0;
+    text-align: right;
+    transform: skew(16deg);
 }
 
-@media screen and (max-width: 768px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #41DEC2;
-        text-align: center;
-    }
-
-    .nav-list.show {
-        display: flex;
-    }
-
-    .nav-list li {
-        margin: 15px 0;
-    }
-
-    .nav-list a:hover {
-        color: #ffffff;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
+/* Apparition effect on links */
+.main-nav a {
+    opacity: 0;
+    transform: translateY(-10px);
 }
+
+.main-nav.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+}
+.main-nav li:nth-child(1) a {
+	transition: all 275ms 175ms
+}
+.main-nav li:nth-child(2) a {
+	transition: all 275ms 225ms
+}
+.main-nav li:nth-child(3) a {
+	transition: all 275ms 275ms
+}
+.main-nav li:nth-child(4) a {
+	transition: all 275ms 325ms
+}
+.main-nav li:nth-child(5) a {
+	transition: all 275ms 375ms
+}
+
+
+/* Decoration */
+.main-nav ul,
+.main-nav li {
+	list-style: none;
+	padding: 0;
+}
+.main-nav a {
+	display: block;
+	padding: 12px 0;
+	color: #5A3B5D;
+	font-size: 1.4em;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
+.open-main-nav {
+	position: absolute;
+	top: 15px;
+	padding-top: 20px;
+	right: 15px;
+	z-index: 1000;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+.open-main-nav:focus {
+	outline: none;
+}
+.burger {
+	position: relative;
+	display: block;
+	width: 28px;
+	height: 4px;
+	margin: 0 auto;
+	background: #5A3B5D;
+	transform: skew(5deg);
+	transition: all .275s;
+}
+
+.burger:after,
+.burger:before {
+	content: '';
+	display: block;
+	height: 100%;
+	background: #5A3B5D;
+	transition: all .275s;
+}
+
+.burger:after {
+	transform: translateY(-12px) translateX(-2px) skew(-20deg);
+}
+
+.burger:before {
+	transform: translateY(-16px) skew(-10deg);
+}
+
+/* Toggle State part */
+.is-open .burger {
+	transform: skew(5deg) translateY(-8px) rotate(-45deg);
+}
+
+.is-open .burger:before {
+	transform: translateY(0px) skew(-10deg) rotate(75deg);
+}
+
+.is-open .burger:after {
+	transform: translateY(-12px) translateX(10px) skew(-20deg);
+    opacity: 0;
+}
+
+/* MENU Text part */
+
+.burger-text {
+	display: block;
+	font-size: .675rem;
+	letter-spacing: .05em;
+	margin-top: .5em;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-align: center;
+	color: #5A3B5D;
+}
+
+.container {
+	position: absolute;
+	top: 0; right: 0;
+	bottom: 0; left: 0;
+	overflow: hidden;
+	background: linear-gradient(to bottom, #eee, #ddd);
+}
+
 
 /* End of Navbar */
 
 /* Main section */
 
 #container_one{
+    color: #5A3B5D;
     height: 50vh;
+    position: relative;
 }
 
 #hero_container{
@@ -116,10 +208,11 @@ body {
     justify-content: center;
     align-items: start;
     height: 35vh;
+    padding-top: 45vh;
 }
 
 #hero_textOne{
-    font-size: 27px;
+    font-size: 24px;
     margin:10px;
 }
 
@@ -135,12 +228,11 @@ main span{
 }
 
 .standard_btn{
-    font-size: 21px;
-    border: 1px solid #41DEC2 ;
+    font-size: 22px;
+    border: 1px solid #41DEC2;
     background-color: #E5E5E5;
     color: #41DEC2;
     margin: 30px 0px 0px 100px;
 }
-
 
 /* End of main section */
