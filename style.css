@@ -363,7 +363,7 @@ body {
 
 .project_box{
     height: 30%;
-    width: 40%;
+    width: 50vw;
     margin: 10px;
     border: 1px solid black;
 }
