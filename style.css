@@ -41,7 +41,7 @@ body {
     visibility: visible;
 }
 
-/* Yellow band effect */
+/* blue band effect */
 .main-nav::before {
 	 content: '';
     position: absolute;
@@ -207,7 +207,7 @@ body {
 }
 
 #hero_container{
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -304,9 +304,8 @@ body {
 /* About section */
 
 #container_two{
-    color: #ffffff;
-    background-color: #71797E;
-    height: 75vh;
+    color: #5A3B5D;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -317,10 +316,16 @@ body {
 #about_me_title{
     width: 100%;
     height: 5vh;
-    text-align: center;
+    text-align: start;
     font-size: 30px;
-    padding: 10px;
-    
+    padding: 12px;
+    margin: 12px;   
+}
+
+.line{
+    text-align: start;
+    border-bottom: 1px solid #5A3B5D;
+    width: 60%;
 }
 
 #my_photo{
@@ -330,6 +335,7 @@ body {
 }
 
 #about_me_text{
+    margin: 20px;
     font-size: 20px;
     width: 85%;
 }
@@ -337,6 +343,54 @@ body {
 .about_me_emphasis{
     color: #41DEC2;
     text-shadow: #ffffff;
+}
+
+#network_section{
+    width: 100%;
+    text-align: end;
+}
+
+
+#network_section a {
+    font-size: 17px;
+    margin: 14px;
+    color: #5A3B5D;
+    text-decoration: none;
+}
+
+#social_network{
+    margin: 10px;
+    font-size: 23px;
+}
+
+/* Section btn Linkedin */
+#social_network_linkedin:hover{
+    border-radius: 5px;
+    border: 1px solid  #000000 ;
+    background-color: #0366c3 ;
+}
+
+#social_network_linkedin a{
+    font-size: 19px;
+}
+
+#social_network_linkedin a:hover{
+    color: white;
+}
+
+/* Section btn Github */
+#social_network_github:hover{
+    border-radius: 5px;
+    border: 1px solid  #ffffff ;
+    background-color: #171515 ;
+}
+
+#social_network_github a{
+    font-size: 19px;
+}
+
+#social_network_github a:hover{
+    color: #ffffff;
 }
 
 /* End of about section */
@@ -362,8 +416,8 @@ body {
 }
 
 .project_box{
-    height: 30%;
-    width: 50vw;
+    height: 100px;
+    width: 100vw;
     margin: 10px;
     border: 1px solid black;
 }
