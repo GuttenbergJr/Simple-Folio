@@ -1,3 +1,6 @@
+
+/* GLOBAL INTERACTIONS */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +13,6 @@ html{
 }
 
 body {
-    background-color: #E5E5E5;
     justify-content: center;
     align-items: center;
     column-gap: 40px;
@@ -18,7 +20,42 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Navbar  */
+/* All Keyframes */
+@keyframes fade-down{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+/* End of Keyframes */
+
+
+
+/* Scroll animation */
+.section_paragraph{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease-in-out;
+}
+
+.section_paragraph--visible{
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+
+/* END GLOBAL INTERACTIONS */
+
+
+
+
+/* NAVBAR */
 
 /* Main menu positionning */
 .main-nav {
@@ -195,10 +232,12 @@ body {
 	background: linear-gradient(to bottom, #eee, #ddd);
 }
 
+/* END OF MOBILE NAVBAR */
 
-/* End of Navbar */
 
-/* Main section */
+
+
+/* MAIN SECTION */
 
 #main_container{
     color: #5A3B5D;
@@ -207,11 +246,13 @@ body {
 }
 
 #hero_container{
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    animation: fade-down 1.5s backwards;
+    
 }
 
 #hero_textOne{
@@ -297,15 +338,17 @@ body {
 	animation-delay:0s;
 	-webkit-animation-delay:0s; /* Safari and Chrome */
   }
-
-
 /* End of main section */
 
-/* About section */
+
+
+
+
+/* ABOUT ME SECTION */
 
 #about_container{
     color: #5A3B5D;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -314,7 +357,6 @@ body {
 }
 
 .container_title{
-    width: 100%;
     height: 5vh;
     text-align: start;
     font-size: 30px;
@@ -353,57 +395,12 @@ body {
     text-shadow: #ffffff;
 }
 
-#network_section{
-    width: 100%;
-    text-align: end;
-}
+/* END OF ABOUT ME SECTION */
 
 
-#network_section a {
-    font-size: 17px;
-    margin: 14px;
-    color: #5A3B5D;
-    text-decoration: none;
-}
 
-#social_network{
-    margin: 10px;
-    font-size: 23px;
-}
 
-/* Section btn Linkedin */
-#social_network_linkedin:hover{
-    border-radius: 5px;
-    border: 1px solid  #000000 ;
-    background-color: #0366c3 ;
-}
-
-#social_network_linkedin a{
-    font-size: 19px;
-}
-
-#social_network_linkedin a:hover{
-    color: white;
-}
-
-/* Section btn Github */
-#social_network_github:hover{
-    border-radius: 5px;
-    border: 1px solid  #ffffff ;
-    background-color: #171515 ;
-}
-
-#social_network_github a{
-    font-size: 19px;
-}
-
-#social_network_github a:hover{
-    color: #ffffff;
-}
-
-/* End of about section */
-
-/* Projects section */
+/* PROJECTS SECTION  */
 
 #projects_container{
     background-color: #E5E5E5 ;
@@ -413,6 +410,12 @@ body {
 #projects_title{
     font-size: 30px;
 
+}
+
+.project_name{
+    width: 40%;
+    text-align: center;
+    margin: 10px;
 }
 
 #p-container{
@@ -451,15 +454,19 @@ body {
     margin: 5px;
     height: 20px;
 }
+/* END OF PROJECTS SECTION */
 
-/* End of projects section */
 
-/* Contact section */
+
+
+/* CONTACT ME SECTION */
 
 #contact_section{
-    background-color: blue;
     height: 100vh;
+    margin-top: 50px;
 }
 
 
 
+
+/* END OF CONTATC ME SECTION */
