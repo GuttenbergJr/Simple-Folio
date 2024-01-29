@@ -459,14 +459,39 @@ body {
 
 
 
-/* CONTACT ME SECTION */
+/* SKILLS ME SECTION */
 
-#contact_section{
-    height: 100vh;
+#skills_section{
     margin-top: 50px;
 }
 
+#skills_title{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
 
+#language_icons{
+    text-align: center;
+    margin-top: 25px;
+}
+
+#language_icons img{
+    margin: 10px;
+    max-width: 50px;
+}
+
+
+/* END OF SKILLS ME SECTION */
+
+
+
+
+/* CONTACT ME SECTION */
+#contact_section{
+    height: 100vh;
+    margin-top: 20px;
+}
 
 
 /* END OF CONTATC ME SECTION */
