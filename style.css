@@ -33,6 +33,20 @@ body {
     }
 }
 
+
+@keyframes fade-left{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+}
+
+
 /* End of Keyframes */
 
 
@@ -65,7 +79,7 @@ body {
     left: 0;
     bottom: 0;
     text-align: center;
-    background: #E5E5E5;
+    background: #000;
     opacity: 0;
     z-index: -1;
     visibility: hidden;
@@ -149,7 +163,7 @@ body {
 .main-nav a {
 	display: block;
 	padding: 12px 0;
-	color: #5A3B5D;
+	color: black;
 	font-size: 1.4em;
 	text-decoration: none;
 	font-weight: bold;
@@ -175,7 +189,7 @@ body {
 	width: 28px;
 	height: 4px;
 	margin: 0 auto;
-	background: #5A3B5D;
+	background: #E5E5E5;
 	transform: skew(5deg);
 	transition: all .275s;
 }
@@ -185,7 +199,7 @@ body {
 	content: '';
 	display: block;
 	height: 100%;
-	background: #5A3B5D;
+	background: #E5E5E5;
 	transition: all .275s;
 }
 
@@ -221,7 +235,7 @@ body {
 	text-transform: uppercase;
 	font-weight: 500;
 	text-align: center;
-	color: #5A3B5D;
+	color: #E5E5E5;
 }
 
 .container {
@@ -240,13 +254,13 @@ body {
 /* MAIN SECTION */
 
 #main_container{
-    color: #5A3B5D;
-    background-color: #E5E5E5;;
+    color: #E5E5E5;
+    background-color: #000;;
     position: relative;
 }
 
 #hero_container{
-    height: 100vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -256,37 +270,39 @@ body {
 }
 
 #hero_textOne{
-    font-size: 24px;
+    font-size: 30px;
     margin:10px;
 }
 
 
 #hero_textTwo{
-    font-size: 23px;
+    font-size: 28px;
     margin-left: 10px;
 }
 
 #NameSpan{
     color: #41DEC2;
-    font-size: 30px;
+    font-size: 34px;
 }
 
 .standard_btn{
     text-decoration: none;
-    font-size: 22px;
+    font-size: 25px;
     border: 1px solid #41DEC2;
-    border-radius: 100px;
-    background-color: #E5E5E5;
-    color: #41DEC2;
+    border-radius: 7px;
+    color: #E5E5E5;
     width: 50%;
     margin: 20px 0px 0px 80px;
 }
 
 .standard_btn:hover{
-    color: #E5E5E5;
-    background-color: #41DEC2;
-
+    transition: .35s;
+    font-size: 25px;
+    padding: 5px;
+    border: 1px solid #E5E5E5;
+    color: #41DEC2;
 }
+
 
 /* Scroll arrow */
 
@@ -347,13 +363,11 @@ body {
 /* ABOUT ME SECTION */
 
 #about_container{
-    color: #5A3B5D;
-    height: 90vh;
+    color: #E5E5E5;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-
 }
 
 .container_title{
@@ -373,7 +387,7 @@ body {
 }
 
 .line{
-    border-bottom: 1px solid #5A3B5D;
+    border-bottom: 1px solid #E5E5E5;
     width: 60%;
     margin: 10px;
 }
@@ -382,6 +396,8 @@ body {
     border-radius: 5px;
     height: 50%;
     margin: 15px;
+    box-shadow: 15px 20px 25px #41DEC2;
+    height: 25rem;
 }
 
 #about_me_text{
@@ -395,17 +411,58 @@ body {
     text-shadow: #ffffff;
 }
 
+#aboutMe_footer{
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+#undraw_hello_container{
+    display: flex;
+    width: 50vw;
+ 
+}
+
+#undraw_hello_container img{
+    margin-top: 25px;
+    margin-left: 20px;
+    height: 5rem;
+
+
+}
+
+#socialMedia_redirect{
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+}
+
+.media_icon{
+    margin: 7px;
+    margin-top: 20px;
+}
+
+.media_icon img{
+    max-height: 2.1rem;
+    cursor: pointer;
+}
+
+.center_line{
+    border-bottom: 1px solid #E5E5E5;
+    width: 100%;
+    display: none;
+}
+
+.media_icon a:hover + .center_line {
+    display: flex;
+    animation: fade-left 1.5s backwards;
+}
+
 /* END OF ABOUT ME SECTION */
 
 
 
 
 /* PROJECTS SECTION  */
-
-#projects_container{
-    background-color: #E5E5E5 ;
-    
-}
 
 #projects_title{
     font-size: 30px;
@@ -481,7 +538,6 @@ body {
     max-width: 50px;
 }
 
-
 /* END OF SKILLS ME SECTION */
 
 
@@ -491,6 +547,7 @@ body {
 #contact_section{
     height: 100vh;
     margin-top: 20px;
+    
 }
 
 

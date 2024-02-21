@@ -18,7 +18,7 @@
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li>
-                        <a href="#container_two" class="nav_redirect">About me</a>
+                        <a href="#about_container" class="nav_redirect">About me</a>
                     </li>
                     <li>
                         <a href="#" class="nav_redirect">Projects</a>
@@ -37,34 +37,57 @@
         <section id="main_container">
             <!-- Main content -->
             <section>
-            <div id="hero_container">
-                <p id="hero_textOne">Hello, my name is <span id="NameSpan">Guttenberg</span></p>
-                <p id="hero_textTwo">And i'm a web developer</p>
-                <a class="standard_btn" href="#section_two">Conheça mais!</a>
-            </div>
-            <!-- Animated Arrows -->
-            <svg class="arrows">
-                <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                <path class="a3" d="M0 40 L30 72 L60 40"></path>
-            </svg>
-        </section>
+                <div id="hero_container">
+                    <p id="hero_textOne">Hello, my name is <span id="NameSpan">Guttenberg</span></p>
+                    <p id="hero_textTwo">And i'm a web developer</p>
+                    <a class="standard_btn" href="#about_container">Conheça mais!</a>
+                </div>
+                <!-- Animated Arrows -->
+                <svg class="arrows">
+                    <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                    <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                    <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                </svg>
+            </section>
 
             <!-- ABOUT-ME SECTION -->
-            <section id="about_container" >
+            <section id="about_container">
                 <p class="container_title">About me</p>
                 <div class="line_center">
                     <p class="line" class="section_paragraph"></p>
                 </div>
-                <img src="img/Guttenberg.jpg" alt="My_Photo" id="my_photo" class="section_paragraph">
-                <p id="about_me_text"  class="section_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing <span />
+                <img src="src/img/Guttenberg.jpg" alt="Guttenberg's photo" id="my_photo" class="section_paragraph">
+                <p id="about_me_text" class="section_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing
+                    <span />
                     <span class="about_me_emphasis">elit.</span> Nulla repudiandae autem ipsa error
                     deleniti laborum. Accusantium, <span class="about_me_emphasis">libero.</span> Consectetur,
                     deleniti placeat? Nostrum <span class="about_me_emphasis">aspernatur</span> sequi
                     dignissimos perferendis, voluptate totam laudantium eos voluptatum.
                 </p>
+                <section id="aboutMe_footer" class="section_paragraph">
+                    <div id="undraw_hello_container">
+                        <img src="src/img/icons/unDraw/Hello.svg">
+                    </div>
+                    <div id="socialMedia_redirect">
+                        <div class="media_icon">
+                            <a href="https://github.com/GuttenbergJr" target="_blank"><img src="src/img/icons/socialMedia/github.png" alt="Github icon"></a>
+                            <div class="center_line"></div>
+                        </div>
+                        <div class="media_icon">
+                            <a href="#" target="_blank"><img src="src/img/icons/socialMedia/linkedin.png" alt="Linkedin icon"></a>
+                            <div class="center_line"></div>
+                        </div>
+                        <div class="media_icon">
+                            <a href="#" target="_blank"><img src="src/img/icons/socialMedia/github.png" alt="Github icon"></a>
+                            <div class="center_line"></div>
+                        </div>
+
+                       
+                    </div>
+                </section>
+
             </section>
-            
+
             <!-- PROJECTS SECTION -->
             <section id="projects_container" class="section_paragraph">
                 <p class="container_title">My projects</p>
@@ -84,7 +107,7 @@
                 </section>
 
 
-                    
+
             </section>
 
 
@@ -99,11 +122,11 @@
                 <p id="skills_title">Algumas das linguagens que tenho experiência</p>
 
                 <div id="language_icons">
-                    <img src="img/icons/skills icons/html5.png" alt="HTML 5">
-                    <img src="img/icons/skills icons/css3.png" alt="CSS 3">
-                    <img src="img/icons/skills icons/javascript.png" alt="JAVASCRIPT">
-                    <img src="img/icons/skills icons/mysql.png" alt="">
-                    <img src="img/icons/skills icons/react.png" alt="">
+                    <img class="mini_icons" src="img/icons/skills icons/html5.png" alt="HTML 5">
+                    <img class="mini_icons" src="img/icons/skills icons/css3.png" alt="CSS 3">
+                    <img class="mini_icons" src="img/icons/skills icons/javascript.png" alt="JAVASCRIPT">
+                    <img class="mini_icons" src="img/icons/skills icons/mysql.png" alt="">
+                    <img class="mini_icons" src="img/icons/skills icons/react.png" alt="">
                 </div>
             </section>
 
@@ -120,4 +143,5 @@
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
