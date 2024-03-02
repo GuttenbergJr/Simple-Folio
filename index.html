@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container_nav">
             <button id="burger" class="open-main-nav">
                 <span class="burger"></span>
                 <span class="burger-text">Menu</span>
@@ -18,29 +18,29 @@
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li>
-                        <a href="#about_container" class="nav_redirect">About me</a>
+                        <a href="#about_section" class="nav_redirect" id="option1">About me</a>
                     </li>
                     <li>
-                        <a href="#" class="nav_redirect">Projects</a>
+                        <a href="#projects_section" class="nav_redirect" id="option2">Projects</a>
                     </li>
                     <li>
-                        <a href="#" class="nav_redirect">Skills</a>
+                        <a href="#technologies_section" class="nav_redirect" id="option3">Technologies</a>
                     </li>
                     <li>
-                        <a href="#" class="nav_redirect">Contact</a>
+                        <a href="#contact_section" class="nav_redirect" id="option4">Contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section id="main_container">
+        <section id="main_section">
             <!-- Main content -->
             <section>
                 <div id="hero_container">
                     <p id="hero_textOne">Hello, my name is <span id="NameSpan">Guttenberg</span></p>
                     <p id="hero_textTwo">And i'm a web developer</p>
-                    <a class="standard_btn" href="#about_container">Conheça mais!</a>
+                    <a class="standard_btn" href="#about_section">Conheça mais!</a>
                 </div>
                 <!-- Animated Arrows -->
                 <svg class="arrows">
@@ -49,9 +49,8 @@
                     <path class="a3" d="M0 40 L30 72 L60 40"></path>
                 </svg>
             </section>
-
             <!-- ABOUT-ME SECTION -->
-            <section id="about_container">
+            <section id="about_section">
                 <p class="container_title">About me</p>
                 <div class="line_center">
                     <p class="line" class="section_paragraph"></p>
@@ -66,77 +65,153 @@
                 </p>
                 <section id="aboutMe_footer" class="section_paragraph">
                     <div id="undraw_hello_container">
-                        <img src="src/img/icons/unDraw/Hello.svg">
+                        <img src="src/img/icons/unDraw_src/hello.svg">
                     </div>
                     <div id="socialMedia_redirect">
                         <div class="media_icon">
-                            <a href="https://github.com/GuttenbergJr" target="_blank"><img src="src/img/icons/socialMedia/github.png" alt="Github icon"></a>
+                            <a href="https://github.com/GuttenbergJr" target="_blank"><img
+                                    src="src/img/icons/socialMedia_src/github.png" alt="Github icon"></a>
                             <div class="center_line"></div>
                         </div>
                         <div class="media_icon">
-                            <a href="#" target="_blank"><img src="src/img/icons/socialMedia/linkedin.png" alt="Linkedin icon"></a>
+                            <a href="https://www.linkedin.com/in/guttenberg-junior-820352268/" target="_blank"><img
+                                    src="src/img/icons/socialMedia_src/linkedin.png" alt="Linkedin icon"></a>
                             <div class="center_line"></div>
                         </div>
                         <div class="media_icon">
-                            <a href="#" target="_blank"><img src="src/img/icons/socialMedia/github.png" alt="Github icon"></a>
+                            <a href="https://www.instagram.com/guttojnr/?next=%2F" target="_blank"><img
+                                    src="src/img/icons/socialMedia_src/instagram.png" alt="Instagram Icon"></a>
                             <div class="center_line"></div>
                         </div>
-
-                       
                     </div>
                 </section>
-
             </section>
-
             <!-- PROJECTS SECTION -->
-            <section id="projects_container" class="section_paragraph">
+            <section id="projects_section" class="section_paragraph">
                 <p class="container_title">My projects</p>
                 <div class="line_center">
                     <p class="line"></p>
                 </div>
-
-                <h1 class="project_name">Decodificador</h1>
-                <section id="p-container">
-                    <div class="project_box">
-                        <img src="img/icons/codeIcon.png" alt="">
-                    </div>
-                    <section class="project_deploy_box">
-                        <span><img class="code_icon" src="img/icons/codeIcon.png" alt=""></span>
-                        <span><img class="github_icon" src="img/icons/githubIcon.svg" alt=""></span>
-                    </section>
+                <section id="projects_text">
+                    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, voluptas eum molestias
+                        consequatur, cumque minima itaque blanditiis neque illo corrupti rerum esse. Sit minima aliquid
+                        deserunt, est optio et natus!</h1>
                 </section>
-
-
-
+                <section id="projects_container">
+                    <div class="box_frontEnders">
+                        <section id="redirect_conteiner">
+                            <section class="project_redirect_icon">
+                                <a href="https://guttenbergjr.github.io/03.-Projeto_FrontEnders/" target="_blank"><img
+                                        src="src/img/icons/technologies_src/code.png" alt=""></a>
+                            </section>
+                            <section class="project_redirect_icon">
+                                <a href="https://github.com/GuttenbergJr/03.-Projeto_FrontEnders" target="_blank"><img
+                                        src="src/img/icons/socialMedia_src/github.png" alt=""></a>
+                            </section>
+                        </section>
+                    </div>
+                    <div class="box_codificador">
+                        <section id="redirect_conteiner">
+                            <section class="project_redirect_icon">
+                                <a href="https://guttenbergjr.github.io/02.-Projeto_Decodificador/" target="_blank"><img
+                                        src="src/img/icons/technologies_src/code.png" alt=""></a>
+                            </section>
+                            <section class="project_redirect_icon">
+                                <a href="https://github.com/GuttenbergJr/02.-Projeto_Decodificador/tree/main"
+                                    target="_blank"><img src="src/img/icons/socialMedia_src/github.png" alt=""></a>
+                            </section>
+                        </section>
+                    </div>
+                    <div class="box_m5">
+                        <section id="redirect_conteiner">
+                            <section class="project_redirect_icon">
+                                <a href="https://guttenbergjr.github.io/03.-Projeto_FrontEnders/" target="_blank"><img
+                                        src="src/img/icons/technologies_src/code.png" alt=""></a>
+                            </section>
+                            <section class="project_redirect_icon">
+                                <a href="https://github.com/GuttenbergJr/03.-Projeto_FrontEnders" target="_blank"><img
+                                        src="src/img/icons/socialMedia_src/github.png" alt=""></a>
+                            </section>
+                        </section>
+                    </div>
+                </section>
             </section>
-
-
-
-            <!-- SKILLS SECTION -->
-            <section id="skills_section" class="section_paragraph">
-                <p class="container_title">Skills</p>
+            <!-- Technologies section -->
+            <section id="technologies_section" class="section_paragraph">
+                <p class="container_title">Technologies</p>
                 <div class="line_center">
                     <p class="line"></p>
                 </div>
-
-                <p id="skills_title">Algumas das linguagens que tenho experiência</p>
-
-                <div id="language_icons">
-                    <img class="mini_icons" src="img/icons/skills icons/html5.png" alt="HTML 5">
-                    <img class="mini_icons" src="img/icons/skills icons/css3.png" alt="CSS 3">
-                    <img class="mini_icons" src="img/icons/skills icons/javascript.png" alt="JAVASCRIPT">
-                    <img class="mini_icons" src="img/icons/skills icons/mysql.png" alt="">
-                    <img class="mini_icons" src="img/icons/skills icons/react.png" alt="">
-                </div>
+                <section id="technologies_descr">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rem sequi accusamus</p>
+                </section>
+                <section id="technologies_container">
+                    <div class="technologies_box">
+                        <img src="src/img/icons/technologies_src/html.svg" alt="html icon">
+                    </div>
+                    <div class="technologies_box">
+                        <img src="src/img/icons/technologies_src/css.svg" alt="css icon">
+                    </div>
+                    <div class="technologies_box">
+                        <img src="src/img/icons/technologies_src/js.svg" alt="javascript icon">
+                    </div>
+                    <div class="technologies_box">
+                        <img src="src/img/icons/technologies_src/express-js.svg" alt="express-js icon">
+                    </div>
+                    <div class="technologies_box">
+                        <img src="src/img/icons/technologies_src/react.svg" alt="react-jsx icon">
+                    </div>
+                    <div class="technologies_box">
+                        <img src="src/img/icons/technologies_src/nodejs.svg" alt="node-js icon">
+                    </div>
+                </section>
             </section>
-
-
-
             <!-- CONTACTS SECTION -->
             <section id="contact_section" class="section_paragraph">
-                <p class="container_title">Contatos</p>
+                <div id="contact_t">
+                    <p class="container_title">Contatos</p>
+                </div>
                 <div class="line_center">
                     <p class="line"></p>
+                </div>
+                <div class="container_form">
+                    <div class="text">
+                        Mande-me um email :)
+                    </div>
+                    <form action="https://formsubmit.co/guttenbergbjunior@gmail.com" method="post">
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="name" required>
+                                <div class="underline"></div>
+                                <label for="">Nome</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data">
+                                <input type="text" name="email" required>
+                                <div class="underline"></div>
+                                <label for="">Email</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-data textarea">
+                                <textarea rows="8" cols="80" name="message" required></textarea>
+                                <br />
+                                <div class="underline"></div>
+                                <label for="">Escreva uma mensagem</label>
+                                <br />
+                                <div class="form-row submit-btn">
+                                    <div class="input-data">
+                                        <div class="inner"></div>
+                                        <input id="submit" type="submit" value="Enviar">
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="_subject" value="Novo Email!">
+                            <input type="text" name="_honey" style="display: none;">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="#index.html">
+                    </form>
                 </div>
             </section>
 

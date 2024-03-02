@@ -1,13 +1,41 @@
 // Mobile nav JS
 let burger = document.getElementById('burger'),
 	 nav    = document.getElementById('main-nav');
-
+ 
 const paragraphs = document.querySelectorAll(".section_paragraph");
 
 burger.addEventListener('click', function(e){
 	this.classList.toggle('is-open');
 	nav.classList.toggle('is-open');
+
+	const about = document.getElementById("option1");
+	const projects = document.getElementById("option2");
+	const technologies = document.getElementById("option3");
+	const contact = document.getElementById("option4");
+
+	about.addEventListener('click', () =>{
+		burger.classList.remove("is-open");
+		nav.classList.remove('is-open');
+	});
+
+	projects.addEventListener('click', () =>{
+		burger.classList.remove("is-open");
+		nav.classList.remove('is-open');
+	});
+
+	technologies.addEventListener('click', () =>{
+		burger.classList.remove("is-open");
+		nav.classList.remove('is-open');
+	});
+
+	contact.addEventListener('click', () =>{
+		burger.classList.remove("is-open");
+		nav.classList.remove('is-open');
+	});
+
 });
+
+
 /////////////////////////////////////////////////
 
 // Smooth scroll
