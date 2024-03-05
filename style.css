@@ -247,7 +247,7 @@ body {
 /* MAIN SECTION */
 
 main {
-    background-image: url("src/img/background2.jpg");
+    background-image: url("src/img/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
