@@ -40,7 +40,7 @@
                 <p id="hero_P2">Me chamo <span id="name_span">Guttenberg Junior</span></p>
                 <!-- Web Developer Junior/Programming Student -->
                 <p id="hero_P3">E sou um <span class="heroSpan"> Web Developer jr</span></p>
-                <a href=""><button class="standard_btn" role="button">Saiba mais</button></a>
+                <a href="#about_section"><button class="standard_btn" role="button">Saiba mais</button></a>
                 <img src="src/img/icons/unDraw_src/freelancer.svg" alt="Unsplash freelancer ilustration">
             </div>
             <!-- Animated Arrows -->
@@ -174,45 +174,38 @@
             <div class="line_center">
                 <p class="line"></p>
             </div>
-            <div class="container_form">
-                <div class="text">
-                    Mande-me um email :)
+            <div id="form-centralizer">
+                <div id="contact-text-descr">
+                    <p id="send-email-descr">Me envie um email!</p>
+                    <p id="send-email-descr2">Estou aguardando o seu contato :)</p>
                 </div>
-                <form action="https://formsubmit.co/guttenbergbjunior@gmail.com" method="post">
-                    <div class="form-row">
-                        <div class="input-data">
-                            <input type="text" name="name" required>
-                            <div class="underline"></div>
-                            <label for="">Nome</label>
+                <div class="form-container">
+                    <form class="form" action="https://formsubmit.co/guttenbergbjunior@gmail.com" method="post">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input required name="name" id="name" type="text">
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-data">
-                            <input type="text" name="email" required>
-                            <div class="underline"></div>
-                            <label for="">Email</label>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input required name="email" id="email" type="email">
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-data textarea">
-                            <textarea rows="8" cols="80" name="message" required></textarea>
-                            <br />
-                            <div class="underline"></div>
-                            <label for="">Escreva uma mensagem</label>
-                            <br />
-                            <div class="form-row submit-btn">
-                                <div class="input-data">
-                                    <div class="inner"></div>
-                                    <input id="submit" type="submit" value="Enviar">
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea required="" cols="50" rows="10" id="message"
+                                name="message"></textarea>
                         </div>
-                        <input type="hidden" name="_subject" value="Novo Email!">
-                        <input type="text" name="_honey" style="display: none;">
+                        <input type="submit" id="submit" value="Enviar" class="form-submit-btn">
+
+                        <input type="hidden" name="_next" value="https://guttenbergjr.github.io/Simple-Folio/">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="#">
+                        <input type="text" name="_honey" style="display: none;">
+                        <input type="hidden" name="_subject" value="Novo email!">
+
+
+                    </form>
                 </div>
-            </section>
+            </div>
+        </section>
 
     </main>
     <script src="script.js"></script>

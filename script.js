@@ -59,3 +59,18 @@ function isInView(element){
 
 ///////////////////////////////////////
 
+
+
+// Email confirmation
+
+submit = document.getElementById("submit");
+labelEmail = document.getElementById("email");
+
+
+submit.addEventListener('click', () =>{
+	if(labelEmail != " "){
+		alert("Email enviado com sucesso!")
+		window.location.href = "index.html";
+	}
+})
+
